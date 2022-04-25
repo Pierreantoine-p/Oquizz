@@ -1,0 +1,34 @@
+C:\Users\Gamer\Desktop\folder-structure-node\project
+├── front
+|  ├── public
+|  |  ├── css
+|  |  |  ├── base.css
+|  |  |  └── reset.css
+|  |  ├── images
+|  |  └── script
+|  └── views
+|     ├── pages
+|     |  ├── error.ejs
+|     |  └── home.ejs
+|     └── partials
+|        ├── boilerPlate.ejs
+|        ├── font.ejs
+|        ├── footer.ejs
+|        ├── header.ejs
+|        └── meta.ejs
+├── index.js
+├── package.json
+├── README.md
+├── server
+|  ├── controller
+|  |  ├── error.controller.js
+|  |  └── main.controller.js
+|  ├── data
+|  ├── database
+|  ├── datamapper
+|  └── router.js
+└── __docs
+
+directory: 187 file: 777
+
+ignored: directory (7), file (3)
