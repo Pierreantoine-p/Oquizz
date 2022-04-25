@@ -8,4 +8,4 @@ Ce site a pour but de faire les premiers pas dans la gestion de projets : du con
 
 ## Mise en place
 
-Tout le détail de la mise en place [ici](./__docs/__doc.md);
+Tout le détail de la mise en place [ici](./__docs/__doc.md)
