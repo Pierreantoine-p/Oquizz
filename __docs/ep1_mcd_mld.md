@@ -400,3 +400,7 @@ COMMIT;
 
 
 ```
+
+Annexe : comprendre le thème des quizz
+
+![](tag_understanding.png)
