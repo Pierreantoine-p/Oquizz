@@ -81,7 +81,7 @@ Le client souhaite visualiser la BDD avant de commencer : faire un Schéma
 
 ## Faire un schéma du site : Wireframe
 
-![](/__docs/Wireframe%20-%20Frame%201.jpg)
+![](/__docs/img/Wireframe%20-%20Frame%201.jpg)
 
 ## MCD : Modèle conceptuel de données
 
@@ -218,7 +218,7 @@ title OR name !!
 
 ### Associations (ce qu'on peut imaginer ...)
 
-![MOCODO](../__docs/Quizz.svg)
+![MOCODO](../__docs/img//Quizz.svg)
 
 CREATE DATABASE oquizz
 
@@ -403,4 +403,4 @@ COMMIT;
 
 Annexe : comprendre le thème des quizz
 
-![](tag_understanding.png)
+![](/__docs/img/tag_understanding.png)

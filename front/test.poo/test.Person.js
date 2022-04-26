@@ -5,17 +5,18 @@ console.log("--------------Echo Person");
 //Everything in Class stay in Class !!!! 
 //~Create Class
 class Person {
-    //~object created : instances
+    //~-----------------object created : instances
     firstName;
     lastName;
     age;
     //add for getters
-    _pokemon;
+    _pokemon; //ce qu'on ne veut pas rendre accessible
+    #_password; //rendre cette propriété privée avec #, on empêche la lecture et l'écriture directement sur ces propriétés
 
     //to give an argument, we use a constructor
     //special METHOD !!!automatically called when INSTANCE is created donc dès qu'on met le mot "new"
     //c'est le constructeur qui est lancé
-    //~constructor
+    //~----------constructor
     constructor(firstName, lastName, age) {
         this.firstName = firstName;
         this.lastName = lastName;
@@ -25,15 +26,34 @@ class Person {
 
     //!SOLUTION 2 getters/setters IMPORTANT
     //permet de protéger notre code, pour ne pas rendre disponible en dehors des Class
-    //~getters
-    get pokemon() {
-        return this._pokemon;
-    }
+    //~----------getters : les accesseurs
+    /*  get pokemon() {
+         return this._pokemon;
+     } */
+    get password() {
+        //retourne la valeur du password, on peut accéder à password car on est DANS la class
+        //donne une donnée pour avoir accès à l'extérieur
+        return this.#_password;
+    };
 
-    //~setters
-    set pokemon(poke) {
-        this._pokemon = poke;
-    }
+    //~---------setters : les mutateurs
+    //fait pour modifier la propriété privée
+    /*     set pokemon(poke) {
+            this._pokemon = poke;
+        } */
+
+    set password(pwd) {
+        //on peut faire une vérification comme ça
+        if (pwd.length < 6) {
+            throw new Error("Wrong password");
+            return;
+        };
+        //on peut faire d'autre test
+
+        this.#_password = pwd;
+
+    };
+
     //!
 
     //modern js, we cannot use Person class
@@ -57,11 +77,19 @@ const yumi2 = new Person('yumi', '---From Class---', 30);
 /* yumi2.pokemon = 'pikachu';
 console.log(yumi2); */
 
-
 //ici on fait appel à la methode
 /* console.log(yumi2.sayHello()); */ //ici on peut enlever le console.log car il y a déjà un console log dans la methode
 
 yumi2.sayHello();
 //~check for getters/setters
 console.log(yumi2);
-console.log(yumi2.pokemon);
+//test
+yumi2.password = 'password';
+console.log(yumi2.password); //access to the word "password" of property but not THE password
+
+try {
+    yumi2.password = 'pass'; //create an error
+} catch (error) {
+    console.error(error.message);
+}
+console.log(yumi2.password);
