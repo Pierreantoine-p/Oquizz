@@ -28,5 +28,6 @@ class Car extends Vehicle {
 const vehicle = new Vehicle();
 const car = new Car("110cv", "Mustang", 4);
 
+console.log(vehicle);
 console.log(car);
 

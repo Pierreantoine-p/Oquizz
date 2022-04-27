@@ -32,7 +32,8 @@ class Person {
      } */
     get password() {
         //retourne la valeur du password, on peut accéder à password car on est DANS la class
-        //donne une donnée pour avoir accès à l'extérieur
+        //return donne une donnée pour avoir accès à l'extérieur
+        //ne retourne que la valeur, impossible qu'on puisse la modifier en dehors
         return this.#_password;
     };
 
@@ -71,7 +72,11 @@ class Person {
 //solution 2
 //new va permettre d'instancer une classe
 //ici on parle alors de POO
-const yumi2 = new Person('yumi', '---From Class---', 30);
+const harry = new Person('harry', 'Potter', 30, 'Edwige', 'Caput draconis');
+console.log(harry);
+// console.log(harry.#_password);
+harry._pokemon = "pikachu";
+console.log(harry._pokemon);
 
 //on peut ajouter une nouvelle propriété en faisant SOLUTION 1 DEPRECATED
 /* yumi2.pokemon = 'pikachu';
@@ -79,12 +84,12 @@ console.log(yumi2); */
 
 //ici on fait appel à la methode
 /* console.log(yumi2.sayHello()); */ //ici on peut enlever le console.log car il y a déjà un console log dans la methode
-
+/* 
 yumi2.sayHello();
 //~check for getters/setters
 console.log(yumi2);
 //test
-yumi2.password = 'password';
+yumi2.password = 'password-test';
 console.log(yumi2.password); //access to the word "password" of property but not THE password
 
 try {
@@ -92,4 +97,4 @@ try {
 } catch (error) {
     console.error(error.message);
 }
-console.log(yumi2.password);
+console.log(yumi2.password); */

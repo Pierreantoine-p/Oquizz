@@ -1,3 +1,6 @@
+//~import modules
+
+//~controller
 const mainController = {
 
     renderHomePage(req, res, next) {

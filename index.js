@@ -4,9 +4,8 @@ require('dotenv').config();
 //~import modules
 const express = require('express'),
     app = express(),
-    router = require('./server/router'),
-    errorController = require('./server/controller/error.controller');    
-//~data locals
+    router = require('./app/router'),
+    errorController = require('./app/controller/error.controller');    
     
 //~url encoded
 app.use(express.json());

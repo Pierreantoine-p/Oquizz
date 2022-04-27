@@ -1,8 +1,7 @@
 //~importmodules
 const { Router } = require('express');
 const router = Router();
-const mainController = require('./controller/main.controller');
-const { renderHomePage } = mainController;
+const { renderHomePage } = require('./controller/main.controller');
 
 //~routers
 router.get('/', renderHomePage)
