@@ -146,6 +146,8 @@ Et ça donne ça :
 
 ![](/__docs/img/getter_setter_infos.png)
 
+Très bonne source d'info sur les getters et setters : [Ici](https://www.koderhq.com/tutorial/javascript/accessor/)
+
 CONSEIL : NE PAS OUBLIER D'ENLEVER TOUS LES CONSOLE.LOG  QUAND ON DEPLOIE
 
 ## Application de la POO
